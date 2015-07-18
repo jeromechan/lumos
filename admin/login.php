@@ -1,5 +1,14 @@
 <?php
 require_once '../lib/config.php';
+
+//判断是否已登录
+$sessionLogin = new \Ss\User\SessionLogin($_COOKIE['PHPSESSID']);
+$sessionLoginData = $sessionLogin->GetSessArray();
+if (!empty($sessionLoginData)) {
+    header("Location:/admin/index.php");
+    return;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
