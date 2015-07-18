@@ -12,5 +12,5 @@ $PHPSESSID = $_COOKIE['PHPSESSID'];
 $sessionLogin = new \Ss\User\SessionLogin($PHPSESSID);
 $sessionLogin->DelSessionArray();
 
-header("Location:login.php");
+header("Location:../index.php");
 exit;
