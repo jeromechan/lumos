@@ -6,7 +6,7 @@ require_once '../lib/config.php';
 $sessionLogin = new \Ss\User\SessionLogin($_COOKIE['PHPSESSID']);
 $sessionLoginData = $sessionLogin->GetSessArray();
 if (!empty($sessionLoginData)) {
-    header("Location:/admin/index.php");
+    header("Location:/user/index.php");
     return;
 }
 
