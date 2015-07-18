@@ -145,5 +145,7 @@ require_once '../lib/config.php';
         });
     })
 </script>
+<?php
+include_once '../ana.php';?>
 </body>
 </html>

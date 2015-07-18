@@ -62,7 +62,7 @@ require_once '../lib/config.php';
                 <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
                 <p id="msg-error-p"></p>
             </div>
-        <a href="resetpwd.php">忘记密码</a><br>
+<!--        <a href="resetpwd.php">忘记密码</a><br>-->
         <a href="register.php" class="text-center">注册个帐号</a>
 
     </div><!-- /.login-box-body -->
@@ -133,5 +133,7 @@ require_once '../lib/config.php';
         });
     })
 </script>
+<?php
+include_once '../ana.php';?>
 </body>
 </html>
