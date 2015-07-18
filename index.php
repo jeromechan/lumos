@@ -8,8 +8,8 @@ include_once 'header.php';
     <?php include_once 'nav.php';?>
 
     <div class="jumbotron">
-        <h2><?php echo $site_name; ?></h2>
-        <p class="lead">“畅游全世界任一站点，让互联网不再有国界”</p>
+        <h2><?php echo $site_name; ?> is coming...</h2>
+<!--        <p class="lead">“畅游全世界任一站点，让互联网不再有国界”</p>-->
 <!--        <p><a class="btn btn-lg btn-success" href="user/register.php" role="button">立即注册</a></p>-->
     </div>
 
