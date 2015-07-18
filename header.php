@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <meta name="description" content="Lumos, a VPN tool for helping surfing all around the world.">
+    <meta name="author" content="jerome chan">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <title><?php echo $site_name; ?></title>
+    <title><?php echo $site_name; ?>, a VPN tool for helping surfing all around the world.</title>
 
     <!-- Bootstrap core CSS -->
     <link href="asset/css/bootstrap.min.css" rel="stylesheet">
