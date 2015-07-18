@@ -8,7 +8,8 @@
     <meta name="author" content="jerome chan">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <title><?php echo $site_name; ?>, a VPN tool for helping surfing all around the world.</title>
+    <title><?php echo $site_name; ?></title>
+<!--    , a VPN tool for helping surfing all around the world.-->
 
     <!-- Bootstrap core CSS -->
     <link href="asset/css/bootstrap.min.css" rel="stylesheet">
