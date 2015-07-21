@@ -121,11 +121,16 @@ if (!empty($sessionLoginData)) {
                     agree: $("#agree").val()
                 },
                 success:function(data){
-                    if(data.ok){
+                    if(data.ok == '1'){
                         $("#msg-error").hide(10);
                         $("#msg-success").show(100);
                         $("#msg-success-p").html(data.msg);
                         window.setTimeout("location.href='login.php'", 2000);
+                    } else if (data.ok == '2') {
+                        $("#msg-error").hide(10);
+                        $("#msg-success").show(100);
+                        $("#msg-success-p").html(data.msg);
+                        window.setTimeout("location.href='index.php'", 2000);
                     }else{
                         $("#msg-error").hide(10);
                         $("#msg-error").show(100);

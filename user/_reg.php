@@ -35,7 +35,22 @@ if(!$code->IsCodeOk()){
     $reg = new \Ss\User\Reg();
     $reg->Reg($name,$email,$passwd,$plan,$transfer,$invite_num,$ref_by);
     $code->Del();
-    $a['ok'] = '1';
-    $a['msg'] = "注册成功";
+
+    //实现注册成功自动跳转的逻辑 add by chenjinlong 20150721
+    //获取用户id
+    $q = new \Ss\User\Query();
+    $id = $q->GetUidByEmail($email);
+    //处理密码
+    $pw = \Ss\User\Comm::CoPW($passwd);
+    // 新增session login逻辑
+    $PHPSESSID = $_COOKIE['PHPSESSID'];
+    $sessionLogin = new \Ss\User\SessionLogin($PHPSESSID);
+    $sessionLogin->AddSessionArray($id, $email, $pw);
+
+    $a['ok'] = '2';
+    $a['msg'] = "注册成功，自动跳转到用户中心";
+//    $a['ok'] = '1';
+//    $a['msg'] = "注册成功";
 }
+
 echo json_encode($a);
