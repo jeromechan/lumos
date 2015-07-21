@@ -61,3 +61,6 @@ require_once '_main.php';
             </div>
         </div>
     </section>
+</div>
+<?php
+require_once '_footer.php'; ?>
