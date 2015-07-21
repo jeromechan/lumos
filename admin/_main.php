@@ -16,6 +16,7 @@ require_once '_check.php';
     <link href="https://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="../asset/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="../asset/css/custom.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link href="../asset/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
