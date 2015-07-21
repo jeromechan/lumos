@@ -31,7 +31,7 @@ $check_min = 1;
 $check_max = 100;
 
 //name
-$site_name = "lumos";
+$site_name = "Lumos";
 $site_url  = "https://lumos.aboutcoder.com/";
 
 //developer
