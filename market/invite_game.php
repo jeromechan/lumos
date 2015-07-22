@@ -1,4 +1,6 @@
 <?php
+require_once '../lib/config.php';
+
 $curStep = !empty($_GET['p']) ? $_GET['p'] : 0;
 if ($curStep == 0) {
     setcookie("PUE", "", time() - 3600);
@@ -16,7 +18,6 @@ if ($curStep == 0) {
 <body>
 <div class="container">
     <?php
-    require_once '../lib/config.php';
     /**
      * Copyright © 2014 AboutCoder.COM. All rights reserved.
      *
@@ -78,6 +79,9 @@ if ($curStep == 0) {
     <?php } ?>
 
     <?php if ($curStep == 1) {
+        ?>
+        <h3>回答问题，获更多流量</h3>
+        <?php
         foreach ($subjectContents as $item) {
             $questionId = $item['id'];
             $questionTitle = $item['title'];
