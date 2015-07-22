@@ -125,7 +125,7 @@ if ($curStep == 0) {
     <?php if ($curStep == 2) {
         ?>
         <div class="row" style="text-align: center;margin-top: 10%;margin-bottom: 90%;">
-            <h3>恭喜你，您的答卷赢得了<?php echo $gameResultGPRS; ?>MB的Lumos VPN流量，如何通过本次筛选，邀请码将于24h内发送到您填写的的邮箱中，请注意查收^_^</h3>
+            <h3>恭喜你，您的答卷赢得了<?php echo $gameResultGPRS; ?>MB的Lumos VPN流量，如何通过本次筛选，邀请码将于24h内发送到您填写的邮箱中，请注意查收^_^</h3>
             <button type="button" id="btn_goto_lumos" class="btn btn-info btn-lg glyphicon glyphicon-share-alt">前往Lumos</button>
         </div>
     <?php } ?>
