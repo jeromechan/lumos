@@ -63,13 +63,13 @@ if ($curStep == 0) {
         ?>
         <div class="row marketing" style="text-align: center;margin-top: 10%;
         margin-left: 50px;margin-right: 50px;">
-            <h3>抢Lumos邀请码活动正在进行中...</h3>
+            <h3>Lumos邀请码活动正在进行中...</h3>
 
             <form class="form-horizontal">
                 <div class="form-group">
                     <label for="email" class="lead">请留下您的宝贵邮箱，注册邀请码将在24h内发送至被选中的参与人员的邮箱</label>
                     <input type="email" class="form-control" id="email" placeholder="Your Email address">
-                    <label for="fullname" class="lead" style="margin-top: 30px;">请留下您的宝贵姓名，熟悉人机会会更大哦~</label>
+                    <label for="fullname" class="lead" style="margin-top: 30px;">如果您愿意留下您的宝贵姓名，被抽中的机会会更大哦~</label>
                     <input type="text" class="form-control" id="fullname" placeholder="Your full name">
                 </div>
                 <button type="button" id="btn_start_game" class="btn btn-info btn-lg glyphicon glyphicon-hand-right">立即参与</button>
