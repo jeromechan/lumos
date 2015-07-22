@@ -6,7 +6,7 @@ if ($curStep == 0) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $site_name; ?>邀请码申请</title>
+    <title><?php echo $site_name; ?>邀请码活动</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="../asset/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -41,8 +41,8 @@ if ($curStep == 0) {
 
     $inviteParticipant = new \Ss\Market\InviteParticipant();
 
-    // 设置活动上限数为10个用户
-    if ($inviteParticipant->GetInviteParticipantArrayCount() >= 10) {
+    // 设置活动上限数为50个用户
+    if ($inviteParticipant->GetInviteParticipantArrayCount() >= 50) {
         $curStep = -1;
     }
 
@@ -63,7 +63,7 @@ if ($curStep == 0) {
         ?>
         <div class="row marketing" style="text-align: center;margin-top: 10%;
         margin-left: 50px;margin-right: 50px;">
-            <h3>抢Lumos帐号活动正在进行中... ...</h3>
+            <h3>抢Lumos邀请码活动正在进行中...</h3>
 
             <form class="form-horizontal">
                 <div class="form-group">
