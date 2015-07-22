@@ -30,6 +30,18 @@ $rs = array();
 if ($curStep == 0) {
     $email = strval($_POST['email']);
     $fullname = strval($_POST['fullname']);
+
+    // 验证邮箱格式
+    if (preg_match("/^([0-9A-Za-z\\-_\\.]+)@([0-9a-z]+\\.[a-z]{2,3}(\\.[a-z]{2})?)$/i", $email)){
+        // "邮箱地址正确!";
+    } else {
+        $rs['code'] = '-4';
+        $rs['ok'] = '-4';
+        $rs['msg'] = "邮箱不符合邮箱规则，请重新核对您的邮箱地址^_^";
+        echo json_encode($rs);
+        return;
+    }
+
     // 用户名，全名记录DB
     if (!empty($email)) {
         $inviteParicipant = new \Ss\Market\InviteParticipant();

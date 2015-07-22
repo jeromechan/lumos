@@ -6,7 +6,7 @@ if ($curStep == 0) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $site_name; ?></title>
+    <title><?php echo $site_name; ?>邀请码申请</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="../asset/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -39,10 +39,16 @@ if ($curStep == 0) {
     $subjectContents = $inviteSubject->GetInviteSubjectArray($subjectIds);
 
 
+    $inviteParticipant = new \Ss\Market\InviteParticipant();
+
+    // 设置活动上限数为10个用户
+    if ($inviteParticipant->GetInviteParticipantArrayCount() >= 10) {
+        $curStep = -1;
+    }
+
     // 初始化流量
     $gameResultGPRS = rand(0, 2048);
     if ($curStep == 2 && !empty($_COOKIE['PUE'])) {
-        $inviteParticipant = new \Ss\Market\InviteParticipant();
         $inviteParticipantData = $inviteParticipant->GetInviteParticipantArray(strval(base64_decode($_COOKIE['PUE'])));
         if ($inviteParticipantData['init_gprs'] == 0) {
             $inviteParticipant->UpdateInviteParticipantInitGPRS($gameResultGPRS, strval(base64_decode($_COOKIE['PUE'])));
@@ -124,6 +130,14 @@ if ($curStep == 0) {
         </div>
     <?php } ?>
 
+    <?php if ($curStep == -1) {
+        ?>
+        <div class="row" style="text-align: center;margin-top: 10%;margin-bottom: 90%;">
+            <h3>邀请码活动已结束，欢迎持续关注lumos.aboutcoder.com！</h3>
+            <button type="button" id="btn_goto_lumos" class="btn btn-info btn-lg glyphicon glyphicon-share-alt">前往Lumos</button>
+        </div>
+    <?php } ?>
+
 
 
 
@@ -152,6 +166,8 @@ if ($curStep == 0) {
                     }else if (data.ok == "-1"){
                         alert(data.msg);
                     }else if (data.ok == "-2"){
+                        alert(data.msg);
+                    }else if (data.ok == "-4"){
                         alert(data.msg);
                     }else {
                         alert("系统忙，请稍后再试^_^");

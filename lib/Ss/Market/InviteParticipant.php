@@ -34,6 +34,10 @@ class InviteParticipant
         return $datas[0];
     }
 
+    function GetInviteParticipantArrayCount() {
+        return $this->db->count($this->table);
+    }
+
     function AddInviteParticipant($email, $fullname){
         $this->db->insert($this->table, [
             "email" => $email,
