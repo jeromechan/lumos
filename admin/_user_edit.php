@@ -7,7 +7,7 @@ if(!empty($_POST)){
     $name = $_POST['name'];
     $passwd = $_POST['passwd'];
     $email = $_POST['email'];
-    $transfer_enable = $_POST['transfer_enable'];
+    $transfer_enable = $_POST['transfer_enable'] * $togb;
     $invite_num = $_POST['invite_num'];
       
     //更新
