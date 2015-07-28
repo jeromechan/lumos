@@ -87,6 +87,8 @@ if(!empty($_GET)){
     </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
 
+<!-- jQuery 2.1.3 -->
+<script src="../asset/js/jQuery.min.js"></script>
 <script>
     $(document).ready(function(){
         $("#submit").click(function(){
@@ -95,7 +97,7 @@ if(!empty($_GET)){
                 url:"_user_edit.php",
                 dataType:"json",
                 data:{
-                    uid: $("#uid").val(),
+                    uid: $("#user_uid").val(),
                     name: $("#name").val(),
                     email: $("#email").val(),
                     passwd: $("#passwd").val(),

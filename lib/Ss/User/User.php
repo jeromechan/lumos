@@ -24,10 +24,10 @@ namespace Ss\User;
 
      function updateUser($name,$email,$passwd,$transfer_enable,$invite_num){
          return $this->db->update($this->table,[
-             `user_name` => $name,
-             `email` => $email,
-             `passwd` => $passwd,
-             `transfer_enable` => $transfer_enable,
+             'user_name' => $name,
+             'email' => $email,
+             'passwd' => $passwd,
+             'transfer_enable' => $transfer_enable,
              'invite_num' => $invite_num
          ],[
              "uid" => $this->uid
