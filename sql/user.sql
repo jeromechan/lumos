@@ -6,14 +6,14 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(128) CHARACTER SET utf8mb4 NOT NULL,
+  `user_name` varchar(128) NOT NULL,
   `email` varchar(32) NOT NULL,
   `pass` varchar(64) NOT NULL,
   `passwd` varchar(16) NOT NULL,
   `t` int(11) NOT NULL DEFAULT '0',
   `u` bigint(20) NOT NULL,
   `d` bigint(20) NOT NULL,
-  `plan` varchar(2) CHARACTER SET utf8mb4 NOT NULL,
+  `plan` varchar(2) NOT NULL,
   `transfer_enable` bigint(20) NOT NULL,
   `port` int(11) NOT NULL,
   `switch` tinyint(4) NOT NULL DEFAULT '1',
