@@ -13,7 +13,7 @@ $togb = $tomb*1024;
 //Define DB Connection  数据库信息
 define('DB_HOST','localhost');
 define('DB_USER','root');
-define('DB_PWD','root');
+define('DB_PWD','');
 define('DB_DBNAME','shadowsocks');
 define('DB_CHARSET','utf8');
 define('DB_TYPE','mysql');
