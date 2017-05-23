@@ -1,5 +1,8 @@
 LUMOS Shadowsocks Management Platform
 ========
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/38aaa04713c74a07950440503e035cf9)](https://www.codacy.com/app/jerome.chan369/lumos?utm_source=github.com&utm_medium=referral&utm_content=jeromechan/lumos&utm_campaign=badger)
+
 Lumos is an easier way to provide and manage shadowsocks accounts for multiple users.
 The name 'lumos' is aimed at remembering the promotion system of Tuniu Corperation which was my first long supported project.
 
